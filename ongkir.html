@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Xaviera Store - Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3a3a80;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 420px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 7px 0 15px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            background: #3a3a80;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #2c2c6b;
+        }
+
+        .box {
+            padding: 10px;
+            background: #eee;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Xaviera Store</h1>
+    <p>Checkout Pembelian</p>
+</header>
+
+<div class="container">
+
+    <!-- PILIH PRODUK -->
+    <label>Pilih Produk:</label>
+    <select id="produk" onchange="updateHarga()">
+        <option value="0">-- PILIH PRODUK --</option>
+        <!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Penjualan</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 230px;
+        height: 100vh;
+        position: fixed;
+        background: #3a3a80;
+        color: white;
+        padding-top: 20px;
+    }
+
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .sidebar a {
+        display: block;
+        padding: 12px 20px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .sidebar a:hover {
+        background: #2c2c5e;
+    }
+
+    /* Content */
+    .content {
+        margin-left: 240px;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    /* Cards */
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        width: 250px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+        margin: 0;
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 18px;
+        margin-top: 10px;
+        color: #333;
+    }
+
+    /* Search Bar */
+    .search-box {
+        margin: 25px 0;
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    .search-box input:focus {
+        border-color: #3a3a80;
+    }
+
+    /* Table */
+    table {
+        width: 100%;
+        margin-top: 10px;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    th, td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        background: #3a3a80;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Xaviera Store</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Data Produk</a>
+    <a href="#">Pesanan</a>
+    <a href="#">Pelanggan</a>
+    <a href="#">Laporan</a>
+</div>
+
+<!-- Content -->
+<div class="content">
+    <div class="title">Dashboard Penjualan</div>
+
+    <!-- Cards -->
+    <div class="card-container">
+        <div class="card">
+            <h3>Total Produk</h3>
+            <p>6 Produk</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Penjualan</h3>
+            <p>Rp 5.200.000</p>
+        </div>
+
+        <div class="card">
+            <h3>Pesanan Masuk</h3>
+            <p>14 Pesanan</p>
+        </div>
+
+        <div class="card">
+            <h3>Pelanggan</h3>
+            <p>25 Orang</p>
+        </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cari pesanan...">
+    </div>
+
+    <!-- Table -->
+    <h2>Daftar Pesanan Terbaru</h2>
+    <table id="orderTable">
+        <tr>
+            <th>No</th>
+            <th>Nama Pembeli</th>
+            <th>Produk</th>
+            <th>Total</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Aulia</td>
+            <td>Dress Wanita</td>
+            <td>Rp 150.000</td>
+            <td>Diproses</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Selia</td>
+            <td>Kaos Hitam</td>
+            <td>Rp 100.000</td>
+            <td>Selesai</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Nazira</td>
+            <td>Hoodie</td>
+            <td>Rp 180.000</td>
+            <td>Dikirim</td>
+        </tr>
+    </table>
+</div>
+
+<!-- Script -->
+<script>
+document.getElementById("searchInput").addEventListener("keyup", function() {
+    let filter = this.value.toLowerCase();
+    let rows = document.querySelectorAll("#orderTable tr");
+
+    for (let i = 1; i < rows.length; i++) {
+        let text = rows[i].textContent.toLowerCase();
+        rows[i].style.display = text.includes(filter) ? "" : "none";
+    }
+});
+</script>
+
+</body>
+</html>
+
+    </select>
+
+    <!-- PILIH WARNA -->
+    <label>Pilih Warna:</label>
+    <select id="warna">
+        <option value="Hitam">Hitam</option>
+        <option value="Putih">Putih</option>
+        <option value="Merah">Merah</option>
+        <option value="Biru">Biru</option>
+        <option value="Coklat">Coklat</option>
+    </select>
+
+    <!-- PILIH UKURAN -->
+    <label>Pilih Ukuran:</label>
+    <select id="ukuran">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+    </select>
+
+    <!-- JUMLAH PESANAN -->
+    <label>Jumlah Pesanan:</label>
+    <input type="number" id="jumlah" value="1" min="1" onchange="updateHarga()">
+
+    <!-- ONGKIR -->
+    <label>Pilih Ekspedisi:</label>
+    <select id="ekspedisi" onchange="updateOngkir()">
+        <option value="0">-- PILIH EKSPEDISI --</option>
+        <option value="10000">JNE - Rp10.000</option>
+        <option value="12000">J&T - Rp12.000</option>
+        <option value="8000">SiCepat - Rp8.000</option>
+    </select>
+
+    <!-- METODE PEMBAYARAN -->
+    <label>Pilih Metode Pembayaran:</label>
+    <select id="metode">
+        <option value="Cash">Cash</option>
+        <option value="Transfer Bank">Transfer Bank</option>
+        <option value="Dana">Dana</option>
+        <option value="OVO">OVO</option>
+    </select>
+
+    <!-- RINCIAN HARGA -->
+    <div class="box">
+        <p>Harga Produk: <b id="hargaProduk">Rp0</b></p>
+        <p>Jumlah Pesanan: <b id="jumlahPesanan">1</b></p>
+        <p>Total Produk: <b id="totalProduk">Rp0</b></p>
+        <p>Ongkir: <b id="hargaOngkir">Rp0</b></p>
+        <hr>
+        <p>Total Bayar: <b id="totalBayar" style="font-size:18px; color:#d10000;">Rp0</b></p>
+    </div>
+
+    <button class="btn" onclick="checkout()">Selesai</button>
+
+<script>
+    let harga = 0;
+    let ongkir = 0;
+
+    function updateHarga() {
+        let produk = parseInt(document.getElementById("produk").value);
+        let jumlah = parseInt(document.getElementById("jumlah").value);
+
+        harga = produk * jumlah;
+
+        document.getElementById("hargaProduk").innerHTML = "Rp" + produk.toLocaleString();
+        document.getElementById("jumlahPesanan").innerHTML = jumlah;
+        document.getElementById("totalProduk").innerHTML = "Rp" + harga.toLocaleString();
+
+        updateTotal();
+    }
+
+    function updateOngkir() {
+        ongkir = parseInt(document.getElementById("ekspedisi").value);
+        document.getElementById("hargaOngkir").innerHTML = "Rp" + ongkir.toLocaleString();
+        updateTotal();
+    }
+
+    function updateTotal() {
+        let total = harga + ongkir;
+        document.getElementById("totalBayar").innerHTML = "Rp" + total.toLocaleString();
+    }
+
+    function checkout() {
+        let produk = document.getElementById("produk").value;
+        let ekspedisi = document.getElementById("ekspedisi").value;
+
+        if (produk == 0 || ekspedisi == 0) {
+            alert("Harap lengkapi semua pilihan sebelum checkout!");
+            return;
+        }
+
+        let metode = document.getElementById("metode").value;
+        let warna = document.getElementById("warna").value;
+        let ukuran = document.getElementById("ukuran").value;
+
+        alert(
+            "Checkout Berhasil!\n\n" +
+            "Total Pembayaran: " + document.getElementById("totalBayar").innerHTML +
+            "\nMetode Pembayaran: " + metode +
+            "\nWarna: " + warna +
+            "\nUkuran: " + ukuran +
+            "\n\nTerima kasih sudah berbelanja!"
+        );
+    }
+</script>
+
+</body>
+</html>
